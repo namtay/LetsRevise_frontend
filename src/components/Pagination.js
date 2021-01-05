@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../css/Pagination.css";
 
 
 function Pagination({questionPerPage,totalQuestions,paginate}) {
@@ -12,7 +12,7 @@ function Pagination({questionPerPage,totalQuestions,paginate}) {
     ))
 
     return (
-        <div>
+        <div className="bg">
             <nav className="col-sm-5 mx-auto mt-5">
                 <ul className="pagination">
                     {

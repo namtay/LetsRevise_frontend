@@ -1,8 +1,16 @@
 .screen {
-  height: 560px;
+  height: 600px;
+  padding-top: 70px;
 }
 
 .addIcon {
   color:rgb(156, 235, 78);
   
+}
+
+
+
+
+.content{
+  position:absolute
 }

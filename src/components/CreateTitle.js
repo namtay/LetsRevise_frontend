@@ -14,7 +14,7 @@ function CreateTitle() {
     await  createTitle(data);       
     let val=   JSON.stringify(data);
     console.log(val);    
-    history.push("/menu");
+    history.push("/menu")
     await getTitle()
       
    }

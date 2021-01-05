@@ -19,7 +19,7 @@ function SignUpForm() {
         <Col md={{ span: 10, offset: 1 }}>
           <FormComInner
             controlId="formBasicPassword"
-            label="Confirm Password"
+            label="Password"
             type="password"
           ></FormComInner>
         </Col>
@@ -28,7 +28,7 @@ function SignUpForm() {
         <Col md={{ span: 10, offset: 1 }}>
           <FormComInner
             controlId="formBasicConfirmPassword"
-            label="Password"
+            label=" Confirm Password"
             type="password"
           ></FormComInner>
         </Col>

@@ -14,12 +14,15 @@ function Navbar() {
     const handleLoginShow = () => setLoginShow(true);
     const handleLoginClose = () => setLoginShow(false);
     
-    const handleLogin=(e)=>{
-           e.preventDefault();
+    const handleLogin=async(e)=>{
+           e.preventDefault();           
            history.push("/menu");
            handleLoginClose();
     }
 
+    const handleSignUp=()=>{
+
+    }
     return (
         <div className="row row-content">
           <div className="col-12">          
@@ -37,7 +40,7 @@ function Navbar() {
             {
                 show? <SignUpModal show={handleShow}
                  onHide={handleClose} 
-                 text="SignUp"></SignUpModal>:null
+                 text="SignUp" onClick={handleSignUp}></SignUpModal>:null
             }
             { 
                loginShow?

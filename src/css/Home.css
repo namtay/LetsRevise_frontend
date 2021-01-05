@@ -2,10 +2,13 @@
   background-image: url("../img/learning4.jpg");
   width: 100%;
   height: auto;
-  
+  margin-top: 60px;
 }
 
 .screen {
-  height: 560px;
+  height: 600px;
+}
 
+.welcomeMessage {
+  font-size: 20px;
 }
