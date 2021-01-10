@@ -31,7 +31,7 @@ function CreateQuestion() {
      
    };
     return (
-        <div className="container screen mt-auto mainBody">
+        <div className="container  mt-auto createQuestionScreen">
       <div>
         <h3>Add Question</h3>
         <form onSubmit={handleSubmit(submitHandler)}>

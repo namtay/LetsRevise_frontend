@@ -1,14 +1,17 @@
 .backImage {
-  background-image: url("../img/learning4.jpg");
+  background-image: url("../img/thought-catalog-large.jpg");
+  background-size:cover;
   width: 100%;
   height: auto;
   margin-top: 60px;
 }
 
-.screen {
-  height: 600px;
+.homescreen {
+  height: 610px;
 }
 
 .welcomeMessage {
+  padding-top: 20px;
   font-size: 20px;
+  box-shadow: 10px;
 }

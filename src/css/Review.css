@@ -7,10 +7,10 @@
   height: 20rem;
 }
 
-.image {
+.reviewimage {
   height: auto;
   width: 100%;
   position: relative;
-
-  background-image: url("../img/the-climate.jpg")
+  background-image: url("../img/the-climate.jpg");
+  background-size: cover;
 }

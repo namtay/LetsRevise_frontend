@@ -28,7 +28,7 @@ function CreateTitle() {
     // history.push("/menu");
   };
   return (
-    <div className="container screen mt-auto">
+    <div className="container createTitleScreen mt-auto">
       <div>
         <h3>Add Title</h3>
         <form onSubmit={handleSubmit(submitHandler)}>

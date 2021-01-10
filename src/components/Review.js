@@ -60,7 +60,7 @@ function Review(props) {
 //change page
     const paginate =(pageNumber)=>setCurrentPage(pageNumber);
     return (    
-      <div className="image">
+      <div className="reviewimage">
       <br></br>
       <br></br>
       <br></br>

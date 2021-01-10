@@ -1,5 +1,6 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
+import "../css/EditTitleForm.css"
 
 function EditTitleForm({preloadedValues,onSubmit}) {        
                         
@@ -8,7 +9,7 @@ function EditTitleForm({preloadedValues,onSubmit}) {
                   });
                                 
     return (    
-              <div className="container screen mt-auto">
+              <div className="container editTitle mt-auto">
                 <div>
                   <h3>Edit Title</h3>
                   <form onSubmit={handleSubmit(onSubmit)}>

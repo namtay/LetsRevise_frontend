@@ -16,7 +16,7 @@ function ViewQuestion() {
 
     },[])
   return question?(
-    <div className="image">
+    <div className="viewquestionimage">
     <div className="container mainBody ">
     <br></br>
     <br></br>

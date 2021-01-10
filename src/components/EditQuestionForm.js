@@ -1,12 +1,13 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
+import "../css/EditQuestionForm.css";
 
 function EditQuestionForm({preloadedValues,onSubmit}) {
     const {register,handleSubmit} = useForm({
         defaultValues: preloadedValues       
          });
     return (
-        <div className="container screen mt-auto">
+        <div className="container editForm mt-auto">
         <div>
           <h3>Edit Question</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -23,7 +24,7 @@ function EditQuestionForm({preloadedValues,onSubmit}) {
             <div className="form-group col-sm-6">
               <label htmlFor="text">Answer:</label>
               <input
-                name="answer"
+                name="correct_answer"
                 ref={register}
                 className="form-control"
                 type="text"

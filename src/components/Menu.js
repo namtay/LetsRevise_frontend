@@ -33,10 +33,10 @@ function Menu() {
     <tr key={title._id}>
       <td>{title.title}</td>
       <td>
-        <Link to={`/title/${title._id}`}>Edit</Link>
+        <Link to={`/title/${title._id}`} className="text-dark">Edit</Link>
       </td>
       <td>      
-        <Link to={`/question/${title._id}`}>View QuestionSet </Link>
+        <Link to={`/question/${title._id}`} className="text-dark">View QuestionSet </Link>
       </td>
       <td>
         <Link>
@@ -50,8 +50,8 @@ function Menu() {
  
 
   return (
-    
-    <div className="container screen mt-auto ">
+    <div className="menuimage">
+    <div className="container menuscreen mt-auto ">
       <div className="row">
         <div className=" col-sm-10 mx-auto mt-3">
           <h3>Question Sets</h3>
@@ -60,6 +60,7 @@ function Menu() {
               <tr>
                 <th>Question Title</th>
                 <th>Actions</th>
+                <th></th>
                 <th></th>
               </tr>
             </thead>
@@ -78,6 +79,8 @@ function Menu() {
         </div>
       </div>
     </div>
+    </div>
+    
     
     
   );

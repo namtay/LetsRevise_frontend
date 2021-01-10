@@ -1,16 +1,18 @@
-.screen {
-  height: 600px;
+.menuscreen {
+  height: 640px;
   padding-top: 70px;
+  opacity: 100%;
 }
 
 .addIcon {
-  color:rgb(156, 235, 78);
-  
+  color: rgb(156, 235, 78);
 }
 
+.menuimage {
+  background-image: url("../img/max-delsidh.jpg");
+  background-size: cover;
+}
 
-
-
-.content{
-  position:absolute
+.content {
+  position: absolute;
 }

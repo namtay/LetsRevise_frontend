@@ -104,9 +104,9 @@ function Home() {
 
     return (
         <div className="backImage ">
-        <div className="container screen" >
+        <div className="container homescreen" >
         <div className= "row">             
-        <div className="col-sm-8 mx-auto align-self-center mb-5 mt-1 text-white welcomeMessage">Welcome to LetsRevise.LetsRevise helps to have a well organised revision in any area of your choice.</div>
+        <div className="col-sm-8 mx-auto align-self-center mb-5 mt-1 text-white welcomeMessage"></div>
         </div>
         <br></br>
         <br></br>

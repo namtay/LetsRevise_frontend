@@ -34,17 +34,18 @@ function ViewQuestions(props) {
         <tr key={question._id}>
           <td>{`Question ${question.questionNumber}`}</td>
           <td>
-            <Link to={`/edit/question/${question._id}`}>Edit</Link>
+            <Link to={`/edit/question/${question._id}`} className="text-dark">Edit</Link>
           </td>
           <td>      
-            <Link to={`/view/question/${question._id}`}>View Question </Link>
+            <Link to={`/view/question/${question._id}`} className="text-dark">View Question </Link>
           </td>
           <DeleteQuestion id={question._id} titleId={titleId} newState={newQuestions}></DeleteQuestion>
         </tr>
       ));
 
     return (
-        <div className="container screen mt-auto ">
+      <div className="viewquestionsimage">
+      <div className="container questionsmainBody mt-auto ">
       <div className="row">
         <div className=" col-sm-10 mx-auto mt-3">
           <h3>Questions per set</h3>
@@ -53,6 +54,7 @@ function ViewQuestions(props) {
               <tr>
                 <th>Question Number</th>
                 <th>Actions</th>
+                <th></th>
                 <th></th>
               </tr>
             </thead>
@@ -71,6 +73,8 @@ function ViewQuestions(props) {
         </div>
       </div>
     </div>
+      </div>
+       
     )
 }
 
