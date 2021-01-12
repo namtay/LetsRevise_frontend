@@ -1,6 +1,5 @@
 
 import axios from "axios";
-https://letsrevise2.herokuapp.com/
 /*function for creating title*/
 export const createTitle=(newTitle)=>{
     
