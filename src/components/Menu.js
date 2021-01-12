@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect,useContext ,useMemo} from "react";
 import "../css/Menu.css";
 import AddIcon from "@material-ui/icons/AddCircleOutlineTwoTone";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Link ,useRouteMatch,useHistory} from "react-router-dom";
 import { getTitle,deleteTitle } from "./api/api";
+import {TitleContext} from "./context/TitleContext";
 
 
 function Menu() {
-  const match = useRouteMatch();
-  const [newTitles, setNewTitles] = useState([]);
-  const history = useHistory();
+  //const match = useRouteMatch();
+  //const [newTitles, setNewTitles] = useState([]);
+  const {title} = useContext(TitleContext);
+  const[newTitles,setNewTitles]=title;
+  // const history = useHistory();
+ 
 
   const fetchTitles = async () => {
     const data = await getTitle();
@@ -20,12 +24,18 @@ function Menu() {
 
   useEffect(() => {
     fetchTitles();
-  }, [newTitles]);
+  }, []);
+   
 
+  useMemo(()=>{
+
+  },[newTitles,setNewTitles])
 
    const handleDelete=async(id)=>{
     await deleteTitle(id); 
-    fetchTitles();
+    setNewTitles(newTitles.filter(i=>i._id!==id))
+
+  
 
   }
 

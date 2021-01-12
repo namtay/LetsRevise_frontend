@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import "../css/ViewQuestions.css";
 import AddIcon from "@material-ui/icons/AddCircleOutlineTwoTone";
 import { Link ,useRouteMatch,useHistory} from "react-router-dom";
 import DeleteQuestion from "./DeleteQuestion";
 import {getQuestions,deleteQuestion} from "./api/api";
+import {TitleContext} from "./context/TitleContext";
 
 function ViewQuestions(props) {
-    const [newQuestions, setNewQuestions] = useState([]);
+    const {question}=useContext(TitleContext);
+    const [newQuestions, setNewQuestions] = question;
     const [titleId,setTitleId]=useState("");
 
     const match = useRouteMatch();
-    const history = useHistory();
-
-   
+   // const history = useHistory();  
 
     useEffect(() => {
         const fetchQuestions = async () => {
@@ -25,8 +25,6 @@ function ViewQuestions(props) {
         fetchQuestions();
       }, []);
 
-
-      
      
 
    

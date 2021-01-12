@@ -1,10 +1,18 @@
-import React from 'react';
+import React,{useState,useContext} from 'react';
 import "../css/CreateQuestion.css";
 import { useForm } from "react-hook-form";
 import {useRouteMatch,useHistory} from "react-router-dom";
 import {createQuestion,getQuestions} from "./api/api";
+import {TitleContext} from "./context/TitleContext";
 
 function CreateQuestion() {
+    const {question}=useContext(TitleContext);
+    const [newQuestions, setNewQuestions] = question;
+    const [createdQu,setCreatedQu]=useState({
+      question:"",
+      correct_answer:"",
+      title_id:""
+    });
     const { register, handleSubmit } = useForm({
         defaultValues: { },
       });
@@ -15,18 +23,32 @@ function CreateQuestion() {
       
        const onSubmit =async (data)=>{
         console.log(data)
-        await  createQuestion(data,id);       
-        let val=   JSON.stringify(data);
-        console.log(val);    
-        history.push(`/question/${id}`);
-        await getQuestions()
+        const {question,correct_answer}=data;
+        console.log(question)
+        // let iquestion=data.question;
+        // let ianswer=data.correct_answer;
+        await setCreatedQu(
+          question,
+          correct_answer,
+          titleId:match.params.titleId
+        );        
+        console.log(createdQu);  
+        setNewQuestions(prevNewQuestions=>[...prevNewQuestions,createdQu])  
+        console.log(newQuestions)     
+        await  createQuestion(data,id);   
+     
+       
+        //await getQuestions(id)
+       // history.push(`/question/${id}`);
+        
           
        }
 
+      
+
        
     const submitHandler = (data) => {
-        onSubmit(data);   
-       
+        onSubmit(data); 
         
      
    };
@@ -43,12 +65,13 @@ function CreateQuestion() {
               className="form-control"
               type="text"
               id="question"
+              value={createQu.question}
             />
           </div>
           <div className="form-group col-sm-6">
             <label htmlFor="text">Answer</label>
             <input
-              name="answer"
+              name="correct_answer"
               ref={register}
               className="form-control"
               type="text"

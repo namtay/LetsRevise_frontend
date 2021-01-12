@@ -11,6 +11,8 @@ import ViewQuestions from "./components/ViewQuestions";
 import CreateQuestion from "./components/CreateQuestion";
 import EditQuestion from "./components/EditQuestion";
 import ViewQuestion from "./components/ViewQuestion";
+import {TitleProvider} from "./components/context/TitleContext";
+
 
 
 
@@ -21,14 +23,17 @@ function App() {
       <Switch >
           <Route path="/" exact component={Home}></Route>
           <Route path="/review/:id" component={Review}></Route>
-          <Route path="/menu" component={Menu}></Route>
-          <Route path="/title/create" component={CreateTitle}></Route>
-          <Route path="/title/:id" component={EditTitle}></Route>
+          <TitleProvider>
+            <Route path="/menu" component={Menu}></Route>
+            <Route path="/title/create" component={CreateTitle}></Route>
+            <Route path="/title/:id" component={EditTitle}></Route>
+            
+          
           <Route path="/question/:id" component={ViewQuestions}></Route>
           <Route path="/create/question/:titleId" component={CreateQuestion}></Route>
           <Route path="/edit/question/:id" component={EditQuestion}></Route>
           <Route path="/view/question/:id" component={ViewQuestion}></Route>
-            
+          </TitleProvider> 
           
       </Switch>
       
