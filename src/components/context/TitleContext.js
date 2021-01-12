@@ -12,7 +12,7 @@ export const TitleProvider = (props) => {
       titleId: "",
     });
     
-    // const updatedQuestions = [...newQuestions, addQuestions];
+  
 
     return(
        <TitleContext.Provider value={{ title:[newTitles,setNewTitles],question:[newQuestions,setNewQuestions], addQuestion: [addQuestions, setAddQuestions]}}>

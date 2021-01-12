@@ -10,11 +10,7 @@ function CreateQuestion() {
   const [newQuestions, setNewQuestions] = question;
   const [addQuestions, setAddQuestions] = addQuestion;
   
-  // const [createdQu, setCreatedQu] = useState({
-  //   question: "",
-  //   correct_answer: "",
-  //   titleId: "",
-  // });
+ 
   const { register, handleSubmit } = useForm({
     defaultValues: {},
   });
