@@ -20,34 +20,52 @@ function Review(props) {
         const fetchQuestions= async()=>{
              setLoading(true);
              const val= match.params.id;
-             switch(val){
-                 case "18":
-                      res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
-                     setQuestions(res.data.results);
-                     setLoading(false);   
-                     break;
-                case "19":
-                     res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+             console.log(val);
+            //  res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+            //         setQuestions(res.data.results);
+            //         setLoading(false);  
+            if (val=== "18" ||val=== "19" || val=== "22" || val==="23" ){
+                res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
                     setQuestions(res.data.results);
-                    setLoading(false);   
-                    break;
-                case "22":
-                     res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
-                    setQuestions(res.data.results);
-                    setLoading(false);   
-                    break;
-                case "23":
-                    res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
-                    setQuestions(res.data.results);
-                    setLoading(false);   
-                    break;
-                default:
-                    res = await getQuestions(val)
+                    setLoading(false); 
+            }
+            else{
+                   res = await getQuestions(val)
                     console.log(res)
                     console.log(res.questions)
                     setQuestions(res.questions)
                     setLoading(false)
+
             }
+                
+            //  switch(val){
+            //      case "18":
+            //           res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+            //          setQuestions(res.data.results);
+            //          setLoading(false);   
+            //          break;
+            //     case "19":
+            //          res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+            //         setQuestions(res.data.results);
+            //         setLoading(false);   
+            //         break;
+            //     case "22":
+            //          res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+            //         setQuestions(res.data.results);
+            //         setLoading(false);   
+            //         break;
+            //     case "23":
+            //         res = await axios.get(`https://opentdb.com/api.php?amount=10&category=${val}`);
+            //         setQuestions(res.data.results);
+            //         setLoading(false);   
+            //         break;
+            //     default:
+            //         res = await getQuestions(val)
+            //         console.log(res)
+            //         console.log(res.questions)
+            //         setQuestions(res.questions)
+            //         setLoading(false)
+            // }
         }
              fetchQuestions();
     },[]);
