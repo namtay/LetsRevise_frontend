@@ -12,7 +12,7 @@ function Pagination({questionPerPage,totalQuestions,paginate}) {
     ))
 
     return (
-        <div className="bg">
+        <div className="">
             <nav className="col-sm-5 mx-auto mt-5">
                 <ul className="pagination">
                     {
