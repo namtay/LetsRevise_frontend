@@ -1,10 +1,10 @@
 
 import axios from "axios";
-
+https://letsrevise2.herokuapp.com/
 /*function for creating title*/
 export const createTitle=(newTitle)=>{
     
-        axios.post('http://localhost:5000/title/create',newTitle)
+        axios.post('https://letsrevise2.herokuapp.com/title/create',newTitle)
         .then(res=>console.log(res.data))    
         
     }
@@ -12,7 +12,7 @@ export const createTitle=(newTitle)=>{
     
 export const getTitle = async(req,res)=>{
     let result;
-    await  axios.get('http://localhost:5000/title')
+    await  axios.get('https://letsrevise2.herokuapp.com/title')
         .then((res)=>{result = res.data
         })
           
@@ -21,27 +21,27 @@ export const getTitle = async(req,res)=>{
     
 export const getTitleById= async(id)=>{
     let result ;
-  await axios.get(`http://localhost:5000/title/${id}`)
+  await axios.get(`https://letsrevise2.herokuapp.com/title/${id}`)
   .then(res=>result = res.data)
   return result
 } 
 
 
 export const editTitle=(newTitle,id)=>{
-    axios.post(`http://localhost:5000/title/edit/${id}`,newTitle)
+    axios.post(`https://letsrevise2.herokuapp.com/title/edit/${id}`,newTitle)
     .then(res=>console.log(res.data))
 }
 
 
 export const deleteTitle=(id)=>{
-    axios.delete(`http://localhost:5000/title/delete/${id}`)
+    axios.delete(`https://letsrevise2.herokuapp.com/title/delete/${id}`)
     .then(res=>console.log(res.data))
 }
 
 
 export const getQuestions=async(id)=>{
     let result
-    await axios.get(`http://localhost:5000/question/${id}`)
+    await axios.get(`https://letsrevise2.herokuapp.com/question/${id}`)
     .then(res=>{
         result=res.data
         console.log(res.data)})
@@ -50,36 +50,36 @@ export const getQuestions=async(id)=>{
 
 export const createQuestion=(newQuestion,id)=>{
     
-    axios.post(`http://localhost:5000/question/create/${id}`,newQuestion)
+    axios.post(`https://letsrevise2.herokuapp.com/question/create/${id}`,newQuestion)
     .then(res=>console.log(res.data)) 
 }
 
 
 export const getQuestionById=async(id)=>{
     let result ;
-  await axios.get(`http://localhost:5000/question/one/${id}`)
+  await axios.get(`https://letsrevise2.herokuapp.com/question/one/${id}`)
   .then(res=>result = res.data)
   return result
 }
 
 
 export const editQuestion=(newQuestion,id)=>{
-    axios.post(`http://localhost:5000/question/edit/${id}`,newQuestion)
+    axios.post(`https://letsrevise2.herokuapp.com/question/edit/${id}`,newQuestion)
     .then(res=>console.log(res.data))
 }
 
 export const deleteQuestion=(id)=>{
-    axios.delete(`http://localhost:5000/question/delete/${id}`)
+    axios.delete(`https://letsrevise2.herokuapp.com/question/delete/${id}`)
     .then(res=>console.log(res.data))
 }
 
 export const signUp=(newData)=>{
-    axios.post(`http://localhost:5000/user/signup`,newData)
+    axios.post(`https://letsrevise2.herokuapp.com/user/signup`,newData)
     .then(res=>console.log(res.data))   
 }
 
 
 export const signIn=(newData)=>{
-    axios.post(`http://localhost:5000/user/login`,newData)
+    axios.post(`https://letsrevise2.herokuapp.com/user/login`,newData)
     .then(res=>console.log(res.data))   
 }
